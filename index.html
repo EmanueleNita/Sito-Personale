@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nita Emanuele | Info Personali</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg py-0" data-bs-theme="dark">
+  <div class="container-fluid px-4">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#" data-page="home">Home</a></li>
+
+        <!-- Materie dropdown -->
+        <li class="nav-item">
+          <div class="nav-dropdown-wrapper" id="navDropMaterie">
+            <button class="nav-dropdown-trigger" data-nav-drop="navDropMaterie">
+              Materie <i class="fas fa-chevron-down nav-drop-arrow"></i>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li class="nav-dropdown-item" data-page="umanistiche"><i class="fas fa-book-open"></i> Materie Umanistiche</li>
+              <li class="nav-dropdown-item" data-page="scientifiche"><i class="fas fa-laptop-code"></i> Materie Scientifiche</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#" data-page="civica">Educazione Civica</a></li>
+
+        <!-- Altro dropdown -->
+        <li class="nav-item">
+          <div class="nav-dropdown-wrapper" id="navDropAltro">
+            <button class="nav-dropdown-trigger" data-nav-drop="navDropAltro">
+              Altro <i class="fas fa-chevron-down nav-drop-arrow"></i>
+            </button>
+            <ul class="nav-dropdown-menu">
+              <li class="nav-dropdown-item" data-page="pcto"><i class="fas fa-briefcase"></i> PCTO</li>
+              <li class="nav-dropdown-item" data-page="hobby"><i class="fas fa-star"></i> Hobby</li>
+              <li class="nav-dropdown-item" data-page="certificazioni"><i class="fas fa-certificate"></i> Certificazioni</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="d-flex ms-auto">
+        <div class="custom-select-wrapper" id="customSelectWrapper">
+          <button class="custom-select-trigger" id="customSelectTrigger" aria-haspopup="listbox" aria-expanded="false">
+            <i class="fas fa-compass"></i>
+            <span id="customSelectLabel">Vai a...</span>
+            <i class="fas fa-chevron-down custom-select-arrow"></i>
+          </button>
+          <ul class="custom-select-menu" id="customSelectMenu" role="listbox">
+            <li class="custom-select-group-label">Navigazione</li>
+            <li class="custom-select-item" data-value="home" role="option"><i class="fas fa-house-chimney"></i>Home</li>
+            <li class="custom-select-divider"></li>
+            <li class="custom-select-group-label">Materie</li>
+            <li class="custom-select-item" data-value="umanistiche" role="option"><i class="fas fa-book-open"></i>Umanistiche</li>
+            <li class="custom-select-item" data-value="scientifiche" role="option"><i class="fas fa-laptop-code"></i>Scientifiche</li>
+            <li class="custom-select-divider"></li>
+            <li class="custom-select-group-label">Altro</li>
+            <li class="custom-select-item" data-value="civica" role="option"><i class="fas fa-scale-balanced"></i>Educazione Civica</li>
+            <li class="custom-select-item" data-value="pcto" role="option"><i class="fas fa-briefcase"></i>PCTO</li>
+            <li class="custom-select-item" data-value="hobby" role="option"><i class="fas fa-star"></i>Hobby</li>
+            <li class="custom-select-item" data-value="certificazioni" role="option"><i class="fas fa-certificate"></i>Certificazioni</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+
+  <!-- ══ HOME ══ -->
+  <div id="home" class="page active-page">
+    <h2 class="page-title mb-4">EMANUELE NITA</h2>
+    <div class="content-block">
+      <div class="intro-col">
+        <p class="fs-5 fw-medium">Sono nato a <strong>Senigallia</strong> il 01/07/2006, ho attualmente 19 anni e frequento il quinto anno dell'<strong>istituto tecnico informatico</strong>. Finito gli studi, entrerò nel mondo del lavoro con una formazione solida in ambito di programmazione.</p>
+        <div class="placeholder-text mt-3">
+          Sono aperto a nuove esperienze, progetti e collaborazioni. Sono pronto a intraprendere il mio percorso grazie alle competenze acquisite durante il mio percorso scolastico e le esperienze pratiche. Il mio obiettivo è quello di applicare le competenze informatiche nei miei due hobby, il gamedeveloping e scrittore
+        </div>
+      </div>
+      <div class="nav-col">
+        <p>Inserire una foto mia</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- UMANISTICHE (lista) -->
+  <div id="umanistiche" class="page">
+    <h2 class="page-title mb-1">Materie Umanistiche</h2>
+    <p class="page-subtitle">Clicca su una materia per i dettagli</p>
+    <div class="row g-4 mt-1">
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-italiano">
+          <h3><i class="fas fa-book-open"></i>Italiano</h3>
+          <p>Poesie, scrittori, analisi testuale e produzione scritta.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-storia">
+          <h3><i class="fas fa-landmark"></i>Storia</h3>
+          <p>Eventi, personaggi e cambiamenti storici.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-inglese">
+          <h3><i class="fas fa-language"></i>Inglese</h3>
+          <p>Lingua, cultura, letteratura inglese e preparazione linguistica.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-motorie">
+          <h3><i class="fas fa-futbol"></i>Scienze Motorie</h3>
+          <p>Educazione fisica, benessere, sport e teoria del movimento.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-religione">
+          <h3><i class="fas fa-praying-hands"></i>Religione</h3>
+          <p>Storia delle religioni, dialogo e dibattiti.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCIENTIFICHE (lista) -->
+  <div id="scientifiche" class="page">
+    <h2 class="page-title mb-1">Materie Scientifiche e Tecnologiche</h2>
+    <p class="page-subtitle">Clicca su una materia per i dettagli</p>
+    <div class="row g-4 mt-1">
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-informatica">
+          <h3><i class="fas fa-laptop-code"></i>Informatica</h3>
+          <p>Fondamenti di programmazione, algoritmi, database e sviluppo software.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-reti">
+          <h3><i class="fas fa-network-wired"></i>Sistemi e Reti</h3>
+          <p>Architetture di rete, protocolli, amministrazione di sistema e sicurezza.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-matematica">
+          <h3><i class="fas fa-calculator"></i>Matematica</h3>
+          <p>Algebra, analisi, probabilità e statistica.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-tpsit">
+          <h3><i class="fas fa-microchip"></i>TPSIT</h3>
+          <p>Tecnologie e Progettazione di Sistemi Informatici e Telecomunicazioni.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-ai">
+          <h3><i class="fas fa-robot"></i>AI</h3>
+          <p>Intelligenza Artificiale, machine learning, reti neurali ed etica dell'IA.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3" data-goto="det-gpoi">
+          <h3><i class="fas fa-chart-line"></i>GPOI</h3>
+          <p>Gestione Progetti e Organizzazione d'Impresa — metodologie e strumenti.</p>
+          <span class="badge-materia">apri →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DETTAGLI UMANISTICHE -->
+
+  <!-- ITALIANO -->
+  <div id="det-italiano" class="page">
+    <button class="detail-back" data-goto="umanistiche"><i class="fas fa-arrow-left"></i> Materie Umanistiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-book-open"></i></div>
+      <div class="detail-meta">
+        <h1>Italiano</h1>
+        <p class="detail-desc">Letteratura italiana, analisi del testo, grammatica avanzata e produzione scritta. Un percorso tra autori, correnti e linguaggio.</p>
+        <span class="pill pill-green">Letteratura</span>
+        <span class="pill pill-green">Grammatica</span>
+        <span class="pill pill-green">Scrittura</span>
+        <span class="pill pill-green">Analisi testuale</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-feather-alt"></i><h4>Letteratura — Autori e Correnti</h4></div>
+      <p>Studio dei principali autori e movimenti letterari: dal Romanticismo al Novecento. Analisi critica di opere, contesto storico e stile.</p>
+      <div class="notes-area">...</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-pen-nib"></i><h4>Produzione Scritta</h4></div>
+      <p>Temi, analisi del testo, articoli di opinione, saggi brevi. Tecniche per strutturare un testo argomentativo efficace.</p>
+      <div class="notes-area">...</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-spell-check"></i><h4>Grammatica e Linguistica</h4></div>
+      <p>Morfologia, sintassi del periodo, punteggiatura, figure retoriche. Approfondimenti sulla lingua italiana e la sua evoluzione.</p>
+      <div class="notes-area">...</div>
+    </div>
+  </div>
+
+  <!-- STORIA -->
+  <div id="det-storia" class="page">
+    <button class="detail-back" data-goto="umanistiche"><i class="fas fa-arrow-left"></i> Materie Umanistiche</button>
+    <div class="detail-header">
+      <div class="detail-icon gold-icon"><i class="fas fa-landmark"></i></div>
+      <div class="detail-meta">
+        <h1>Storia</h1>
+        <p class="detail-desc">Dallo studio dei grandi eventi ai processi storici che hanno plasmato il mondo moderno e contemporaneo.</p>
+        <span class="pill pill-gold">Storia Moderna</span>
+        <span class="pill pill-gold">Storia Contemporanea</span>
+        <span class="pill pill-gold">Geopolitica</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-scroll"></i><h4>Periodi e Cronologie</h4></div>
+      <p>Linee del tempo, date chiave, eventi fondamentali dalla Rivoluzione Industriale al secondo Novecento.</p>
+      <div class="notes-area">...</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-user-tie"></i><h4>Personaggi e Movimenti</h4></div>
+      <p>Biografie di figure storiche chiave, ideologie politiche, movimenti sociali e loro impatto sulla storia mondiale.</p>
+      <div class="notes-area">...</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-map"></i><h4>Geopolitica e Relazioni Internazionali</h4></div>
+      <p>Trattati, guerre, diplomazia e l'evoluzione degli equilibri internazionali nel corso del Novecento.</p>
+      <div class="notes-area">...</div>
+    </div>
+  </div>
+
+  <!-- INGLESE -->
+  <div id="det-inglese" class="page">
+    <button class="detail-back" data-goto="umanistiche"><i class="fas fa-arrow-left"></i> Materie Umanistiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-language"></i></div>
+      <div class="detail-meta">
+        <h1>Inglese</h1>
+        <p class="detail-desc">Lingua inglese, letteratura britannica e americana, comunicazione professionale e preparazione alle certificazioni.</p>
+        <span class="pill pill-green">Grammar</span>
+        <span class="pill pill-green">Literature</span>
+        <span class="pill pill-green">Speaking</span>
+        <span class="pill pill-green">Writing</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-comments"></i><h4>Grammar &amp; Communication</h4></div>
+      <p>Grammatica inglese avanzata, uso dei tempi, phrasal verbs, connettori. Comunicazione scritta e orale in contesti formali e informali.</p>
+      <div class="notes-area">...</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-book"></i><h4>Literature</h4></div>
+      <p>Autori e testi della letteratura anglofona: romanticismo, vittorianesimo, modernismo. Analisi di brani e opere significative.</p>
+      <div class="notes-area">...</div>
+    </div>
+  </div>
+
+  <!-- SCIENZE MOTORIE -->
+  <div id="det-motorie" class="page">
+    <button class="detail-back" data-goto="umanistiche"><i class="fas fa-arrow-left"></i> Materie Umanistiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-futbol"></i></div>
+      <div class="detail-meta">
+        <h1>Scienze Motorie</h1>
+        <p class="detail-desc">Educazione fisica, teoria dell'allenamento, benessere psicofisico e sport di squadra e individuali.</p>
+        <span class="pill pill-green">Teoria del movimento</span>
+        <span class="pill pill-green">Sport</span>
+        <span class="pill pill-green">Benessere</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-running"></i><h4>Attività Pratiche</h4></div>
+      <p>Sport praticati, giochi di squadra, atletica, ginnastica. Esperienze sportive e competizioni scolastiche.</p>
+      <div class="notes-area">...</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-heartbeat"></i><h4>Teoria — Anatomia e Fisiologia</h4></div>
+      <p>Apparato locomotore, fisiologia del movimento, alimentazione e sport, prevenzione degli infortuni.</p>
+      <div class="notes-area">...</div>
+    </div>
+  </div>
+
+  <!-- RELIGIONE -->
+  <div id="det-religione" class="page">
+    <button class="detail-back" data-goto="umanistiche"><i class="fas fa-arrow-left"></i> Materie Umanistiche</button>
+    <div class="detail-header">
+      <div class="detail-icon gold-icon"><i class="fas fa-praying-hands"></i></div>
+      <div class="detail-meta">
+        <h1>Religione</h1>
+        <p class="detail-desc">Storia delle religioni mondiali, etica, dialogo interculturale e riflessione sui valori nella società contemporanea.</p>
+        <span class="pill pill-gold">Etica</span>
+        <span class="pill pill-gold">Religioni del mondo</span>
+        <span class="pill pill-gold">Valori</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-globe"></i><h4>Religioni a Confronto</h4></div>
+      <p>Caratteristiche delle principali religioni mondiali: Cristianesimo, Islam, Ebraismo, Buddismo, Induismo. Dialogo interreligioso.</p>
+      <div class="notes-area">...</div>
+    </div>
+    <div class="topic-card">
+      <div class="topic-card-header"><i class="fas fa-balance-scale"></i><h4>Etica e Questioni Contemporanee</h4></div>
+      <p>Bioetica, diritti umani, solidarietà, giustizia sociale. La dimensione morale nelle scelte quotidiane e collettive.</p>
+      <div class="notes-area">...</div>
+    </div>
+  </div>
+
+  <!-- DETTAGLI SCIENTIFICHE -->
+
+  <!-- INFORMATICA -->
+  <div id="det-informatica" class="page">
+    <button class="detail-back" data-goto="scientifiche"><i class="fas fa-arrow-left"></i> Materie Scientifiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-laptop-code"></i></div>
+      <div class="detail-meta">
+        <h1>Informatica</h1>
+        <p class="detail-desc">Programmazione, algoritmi, strutture dati, database e sviluppo di applicazioni web e software.</p>
+        <span class="pill">Algoritmi</span>
+        <span class="pill">Php</span>
+        <span class="pill">Database</span>
+        <span class="pill">Web Dev</span>
+      </div>
+    </div>
+    <div class="sci-grid">
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-code"></i></div>
+        <h4>Programmazione</h4>
+        <p>Paradigmi: procedurale, OOP, funzionale. Linguaggi: Python, Java, C++. Algoritmi di ordinamento e ricerca.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-database"></i></div>
+        <h4>Database</h4>
+        <p>Modello relazionale, SQL, progettazione ER, normalizzazione, transazioni e gestione dei dati.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-globe"></i></div>
+        <h4>Sviluppo Web</h4>
+        <p>HTML, CSS, JavaScript. Framework front-end, struttura client-server, REST API e sviluppo full-stack base.</p>
+        <div class="notes-area">...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SISTEMI E RETI -->
+  <div id="det-reti" class="page">
+    <button class="detail-back" data-goto="scientifiche"><i class="fas fa-arrow-left"></i> Materie Scientifiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-network-wired"></i></div>
+      <div class="detail-meta">
+        <h1>Sistemi e Reti</h1>
+        <p class="detail-desc">Architetture di rete, modello OSI/TCP-IP, protocolli, sicurezza informatica e amministrazione di sistema.</p>
+        <span class="pill">TCP/IP</span>
+        <span class="pill">Sicurezza</span>
+        <span class="pill">Linux</span>
+        <span class="pill">Routing</span>
+      </div>
+    </div>
+    <div class="sci-grid">
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-sitemap"></i></div>
+        <h4>Architetture di Rete</h4>
+        <p>Modello ISO/OSI e TCP/IP, topologie, dispositivi (switch, router, firewall), indirizzamento IP e subnetting.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Sicurezza Informatica</h4>
+        <p>Crittografia, certificati SSL/TLS, firewall, VPN, attacchi comuni (phishing, SQL injection, DDoS) e difese.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-terminal"></i></div>
+        <h4>Amministrazione di Sistema</h4>
+        <p>Linux/Unix, comandi shell, gestione utenti e permessi, servizi di rete, configurazione server.</p>
+        <div class="notes-area">...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MATEMATICA -->
+  <div id="det-matematica" class="page">
+    <button class="detail-back" data-goto="scientifiche"><i class="fas fa-arrow-left"></i> Materie Scientifiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-calculator"></i></div>
+      <div class="detail-meta">
+        <h1>Matematica</h1>
+        <p class="detail-desc">Algebra, analisi matematica, geometria, statistica e probabilità. Modellizzazione e problem solving.</p>
+        <span class="pill">Analisi</span>
+        <span class="pill">Algebra</span>
+        <span class="pill">Statistica</span>
+        <span class="pill">Probabilità</span>
+      </div>
+    </div>
+    <div class="sci-grid">
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-infinity"></i></div>
+        <h4>Analisi Matematica</h4>
+        <p>Limiti, derivate, integrali, studio di funzione. Applicazioni alla fisica e all'informatica.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-chart-bar"></i></div>
+        <h4>Statistica e Probabilità</h4>
+        <p>Distribuzioni di probabilità, media/varianza, test statistici, analisi di dati e grafici.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-square-root-alt"></i></div>
+        <h4>Algebra e Geometria</h4>
+        <p>Equazioni, disequazioni, matrici, spazi vettoriali. Geometria analitica e geometria dello spazio.</p>
+        <div class="notes-area">...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TPSIT -->
+  <div id="det-tpsit" class="page">
+    <button class="detail-back" data-goto="scientifiche"><i class="fas fa-arrow-left"></i> Materie Scientifiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-microchip"></i></div>
+      <div class="detail-meta">
+        <h1>TPSIT</h1>
+        <p class="detail-desc">Tecnologie e Progettazione di Sistemi Informatici e di Telecomunicazione. Programmazione distribuita, servizi web e IoT.</p>
+        <span class="pill">Web Services</span>
+        <span class="pill">IoT</span>
+        <span class="pill">Architetture</span>
+        <span class="pill">Progettazione</span>
+      </div>
+    </div>
+    <div class="sci-grid">
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-project-diagram"></i></div>
+        <h4>Progettazione Software</h4>
+        <p>UML, design pattern, architetture MVC e a microservizi. Progettazione di sistemi scalabili e manutenibili.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-wifi"></i></div>
+        <h4>Sistemi Distribuiti e IoT</h4>
+        <p>Comunicazione tra processi, socket, protocolli applicativi (HTTP, MQTT), dispositivi embedded e reti IoT.</p>
+        <div class="notes-area">...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI -->
+  <div id="det-ai" class="page">
+    <button class="detail-back" data-goto="scientifiche"><i class="fas fa-arrow-left"></i> Materie Scientifiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-robot"></i></div>
+      <div class="detail-meta">
+        <h1>Intelligenza Artificiale</h1>
+        <p class="detail-desc">Machine learning, reti neurali, computer vision, NLP ed etica dell'intelligenza artificiale.</p>
+        <span class="pill">Machine Learning</span>
+        <span class="pill">Reti Neurali</span>
+        <span class="pill">NLP</span>
+        <span class="pill">Etica IA</span>
+      </div>
+    </div>
+    <div class="sci-grid">
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-brain"></i></div>
+        <h4>Machine Learning</h4>
+        <p>Algoritmi supervisionati e non supervisionati, regressione, classificazione, clustering. Librerie: scikit-learn, TensorFlow.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-eye"></i></div>
+        <h4>Computer Vision &amp; NLP</h4>
+        <p>Reti neurali convoluzionali, riconoscimento immagini. Elaborazione del linguaggio naturale, modelli linguistici.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-balance-scale"></i></div>
+        <h4>Etica dell'IA</h4>
+        <p>Bias algoritmici, trasparenza, responsabilità, AI Act europeo, impatto sociale delle tecnologie.</p>
+        <div class="notes-area">...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GPOI -->
+  <div id="det-gpoi" class="page">
+    <button class="detail-back" data-goto="scientifiche"><i class="fas fa-arrow-left"></i> Materie Scientifiche</button>
+    <div class="detail-header">
+      <div class="detail-icon"><i class="fas fa-chart-line"></i></div>
+      <div class="detail-meta">
+        <h1>GPOI</h1>
+        <p class="detail-desc">Gestione Progetti e Organizzazione d'Impresa. Project management, metodologie agili e organizzazione aziendale.</p>
+        <span class="pill">Project Management</span>
+        <span class="pill">Agile / Scrum</span>
+        <span class="pill">Business</span>
+      </div>
+    </div>
+    <div class="sci-grid">
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-tasks"></i></div>
+        <h4>Project Management</h4>
+        <p>Ciclo di vita di un progetto, pianificazione (Gantt, WBS), gestione rischi, controllo qualità e documentazione.</p>
+        <div class="notes-area">...</div>
+      </div>
+      <div class="sci-card">
+        <div class="sci-card-icon"><i class="fas fa-sync-alt"></i></div>
+        <h4>Metodologie Agili</h4>
+        <p>Scrum, Kanban, sprint planning, retrospettive. Differenze tra approcci waterfall e agile nella gestione del software.</p>
+        <div class="notes-area">...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ EDUCAZIONE CIVICA ══ -->
+  <div id="civica" class="page">
+    <h2 class="page-title mb-1">Educazione Civica</h2>
+    <p class="page-subtitle">Un percorso trasversale attraverso sette discipline</p>
+
+    <!-- Intro -->
+    <div class="civica-intro">
+      <p>L'Educazione Civica è molto più di una materia: è uno sguardo critico sul mondo che ci circonda. Quest'anno abbiamo affrontato temi che vanno dalla pace internazionale alla cybersecurity, dalla comunicazione digitale alla storia della propaganda.</p>
+    </div>
+
+    <!-- Indice -->
+    <div class="civica-index">
+      <p class="civica-index-label"><i class="fas fa-list-ul"></i> Indice delle discipline</p>
+      <div class="civica-index-grid">
+        <button class="civica-index-item" data-civica="irc"><span class="civica-idx-num">1</span><i class="fas fa-praying-hands"></i>IRC – Religione</button>
+        <button class="civica-index-item" data-civica="inglese"><span class="civica-idx-num">2</span><i class="fas fa-language"></i>Inglese</button>
+        <button class="civica-index-item" data-civica="motorie"><span class="civica-idx-num">3</span><i class="fas fa-futbol"></i>Scienze Motorie</button>
+        <button class="civica-index-item" data-civica="storia"><span class="civica-idx-num">4</span><i class="fas fa-landmark"></i>Storia</button>
+        <button class="civica-index-item" data-civica="italiano"><span class="civica-idx-num">5</span><i class="fas fa-pen-nib"></i>Italiano</button>
+        <button class="civica-index-item" data-civica="gpoi"><span class="civica-idx-num">6</span><i class="fas fa-chart-line"></i>GPOI</button>
+        <button class="civica-index-item" data-civica="sistemi"><span class="civica-idx-num">7</span><i class="fas fa-shield-alt"></i>Sistemi e Reti</button>
+      </div>
+    </div>
+
+    <!-- 1. IRC -->
+    <div class="civica-section" id="civica-irc">
+      <div class="civica-section-header">
+        <div class="civica-section-num">1</div>
+        <div class="civica-section-meta">
+          <h3>IRC – Religione</h3>
+          <p>Pace, Risorse e Integrazione Europea</p>
+        </div>
+        <i class="fas fa-praying-hands civica-section-icon"></i>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-dove"></i><h4>Il tema della pace secondo giustizia</h4></div>
+        <p>La pace secondo giustizia implica che ogni persona abbia accesso alle risorse necessarie per una vita dignitosa. Il concetto di <strong>pace positiva</strong> (Johan Galtung) va oltre la mera cessazione dei conflitti armati: include la rimozione delle cause strutturali della violenza — povertà, discriminazione, ingiustizia. Solo affrontando queste radici profonde è possibile costruire una pace duratura.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-globe-europe"></i><h4>Equa ripartizione delle risorse: ONU e UE</h4></div>
+        <p>Gli <strong>Obiettivi di Sviluppo Sostenibile (SDGs)</strong> dell'ONU per il 2030 rappresentano l'impegno internazionale verso la riduzione delle disuguaglianze. In particolare, l'SDG 10 (Ridurre le disuguaglianze) e l'SDG 2 (Fame zero) delineano un percorso concreto verso la giustizia globale. L'UE, attraverso il Fondo di Coesione e il principio di sussidiarietà, cerca di ridurre i divari economici tra regioni.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-handshake"></i><h4>L'integrazione europea come modello di pace</h4></div>
+        <p>Il progetto europeo nasce come risposta alle devastazioni della Seconda Guerra Mondiale. Jean Monnet e Robert Schuman intuirono che la pace duratura richiedeva la condivisione delle risorse strategiche. La <strong>CECA (1951)</strong> e poi la <strong>CEE (1957)</strong> hanno trasformato l'Europa da campo di battaglia a laboratorio di cooperazione. Oggi l'UE — con oltre 440 milioni di cittadini — è premiata con il Nobel per la Pace nel 2012.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-school"></i><h4>Il ruolo della scuola e la risoluzione pacifica dei conflitti</h4></div>
+        <p>La scuola è il luogo privilegiato dove si costruisce la cultura della pace. Gli strumenti della risoluzione pacifica — mediazione, negoziazione, arbitrato — vengono applicati tanto nei conflitti interpersonali quanto in quelli internazionali. Organizzazioni come l'ONU, l'OSCE e la Corte Internazionale di Giustizia rappresentano il tentativo istituzionale di regolamentare le controversie senza ricorrere alla forza.</p>
+      </div>
+    </div>
+
+    <!-- 2. Inglese -->
+    <div class="civica-section" id="civica-inglese">
+      <div class="civica-section-header">
+        <div class="civica-section-num">2</div>
+        <div class="civica-section-meta">
+          <h3>Inglese</h3>
+          <p>Jobs, Poverty, Innovation, Knowledge, Technology &amp; AI</p>
+        </div>
+        <i class="fas fa-language civica-section-icon"></i>
+      </div>
+      <div class="sci-grid">
+        <div class="sci-card">
+          <div class="sci-card-icon"><i class="fas fa-briefcase"></i></div>
+          <h4>Jobs</h4>
+          <p>Il mercato del lavoro è in continua trasformazione. Gig economy, remote working e automazione hanno ridisegnato profili professionali. Concetti come <strong>hard skills vs soft skills</strong> e lifelong learning sono centrali nel dibattito sul futuro del lavoro.</p>
+        </div>
+        <div class="sci-card">
+          <div class="sci-card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+          <h4>Poverty</h4>
+          <p>Distinguere tra <strong>income poverty</strong> e <strong>multidimensional poverty</strong> aiuta a comprendere la complessità del fenomeno. Le cause strutturali — disuguaglianza, mancanza di istruzione, discriminazione — richiedono risposte sistemiche.</p>
+        </div>
+        <div class="sci-card">
+          <div class="sci-card-icon"><i class="fas fa-lightbulb"></i></div>
+          <h4>Innovation</h4>
+          <p>Dal concetto di <strong>disruptive innovation</strong> (Christensen) alla Silicon Valley come modello, abbiamo esplorato come le idee diventano prodotti. Start-up, venture capital e brevetti sono gli strumenti di questo processo.</p>
+        </div>
+        <div class="sci-card">
+          <div class="sci-card-icon"><i class="fas fa-brain"></i></div>
+          <h4>Knowledge</h4>
+          <p>La distinzione tra dato, informazione e conoscenza (<strong>data → information → knowledge → wisdom</strong>) aiuta a navigare la sovrabbondanza informativa, riconoscere le fake news e costruire un pensiero autonomo.</p>
+        </div>
+        <div class="sci-card">
+          <div class="sci-card-icon"><i class="fas fa-robot"></i></div>
+          <h4>Technology &amp; AI</h4>
+          <p>Da machine learning a large language models, abbiamo esplorato funzionamento, opportunità e rischi dell'IA. L'<strong>AI Act europeo (2024)</strong> rappresenta il primo quadro normativo globale per la regolazione dell'intelligenza artificiale.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Scienze Motorie -->
+    <div class="civica-section" id="civica-motorie">
+      <div class="civica-section-header">
+        <div class="civica-section-num">3</div>
+        <div class="civica-section-meta">
+          <h3>Scienze Motorie</h3>
+          <p>Tecnologia applicata allo Sport</p>
+        </div>
+        <i class="fas fa-futbol civica-section-icon"></i>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-microchip"></i><h4>Tecnologia applicata allo sport: panoramica</h4></div>
+        <p>Dallo <strong>Hawk-Eye</strong> nel tennis al <strong>VAR</strong> nel calcio, la tecnologia ha reso le decisioni arbitrali più accurate. Il goal-line technology determina in millisecondi se il pallone ha superato la linea. La biomeccanica computazionale permette di ottimizzare il gesto atletico attraverso modelli 3D del corpo in movimento.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-chart-bar"></i><h4>Sports Analytics e Moneyball</h4></div>
+        <p>Il fenomeno <strong>Moneyball</strong> (Oakland Athletics, 2002) ha dimostrato come i dati statistici possano battere il fiuto degli scout tradizionali. Oggi i GPS indossabili tracciano in tempo reale distanza, velocità massima e carico di lavoro di ogni atleta, permettendo di personalizzare gli allenamenti e prevenire infortuni.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-stopwatch"></i><h4>Strumenti per la misurazione delle prestazioni</h4></div>
+        <p>Wearable sensors (accelerometri, giroscopi, cardiofrequenzimetri), GPS di precisione con aggiornamento 10–25 volte/sec, test di <strong>lattato e VO₂max</strong>, piattaforme di forza per misurare esplosività e simmetria, video analysis software come Dartfish e Hudl. Strumenti un tempo riservati all'élite, oggi accessibili grazie alla democratizzazione del wearable.</p>
+      </div>
+    </div>
+
+    <!-- 4. Storia -->
+    <div class="civica-section" id="civica-storia">
+      <div class="civica-section-header">
+        <div class="civica-section-num">4</div>
+        <div class="civica-section-meta">
+          <h3>Storia</h3>
+          <p>Propaganda, Censura e Gestione dell'Informazione</p>
+        </div>
+        <i class="fas fa-landmark civica-section-icon"></i>
+      </div>
+      <div class="civica-timeline">
+        <div class="civica-tl-item">
+          <div class="civica-tl-dot"></div>
+          <div class="civica-tl-content">
+            <span class="civica-tl-era">1920s – 1940s</span>
+            <h4>L'età d'oro della propaganda</h4>
+            <p>Nazismo, fascismo e stalinismo sviluppano tecniche sofisticate di controllo dell'informazione. Goebbels teorizza la propaganda come "arte totale": manifesti, cinema, radio e adunate di massa. Leni Riefenstahl porta la propaganda cinematografica a livelli estetici insuperati.</p>
+          </div>
+        </div>
+        <div class="civica-tl-item">
+          <div class="civica-tl-dot"></div>
+          <div class="civica-tl-content">
+            <span class="civica-tl-era">1950s – 1970s</span>
+            <h4>Guerra Fredda e guerra dell'informazione</h4>
+            <p>CIA e KGB conducono battaglie mediatiche. Radio Free Europe e Radio Mosca trasmettono versioni opposte della realtà. La censura nei Paesi del blocco sovietico impedisce l'accesso alle informazioni occidentali.</p>
+          </div>
+        </div>
+        <div class="civica-tl-item">
+          <div class="civica-tl-dot"></div>
+          <div class="civica-tl-content">
+            <span class="civica-tl-era">1980s – 2000s</span>
+            <h4>Dal cartaceo al digitale</h4>
+            <p>L'avvento del personal computer e di internet trasforma la produzione e distribuzione dell'informazione. I quotidiani cartacei iniziano il lungo declino. La libertà di stampa diventa libertà di accesso alla rete.</p>
+          </div>
+        </div>
+        <div class="civica-tl-item">
+          <div class="civica-tl-dot gold-dot"></div>
+          <div class="civica-tl-content">
+            <span class="civica-tl-era">2010s – Oggi</span>
+            <h4>Era del cloud e delle fake news</h4>
+            <p>I social media amplificano le notizie false con velocità senza precedenti. Il concetto di <strong>post-truth</strong> (parola dell'anno Oxford 2016) descrive un'era in cui le emozioni contano più dei fatti. L'<strong>European Media Freedom Act (2024)</strong> tenta di proteggere il pluralismo informativo nell'era digitale.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Italiano -->
+    <div class="civica-section" id="civica-italiano">
+      <div class="civica-section-header">
+        <div class="civica-section-num">5</div>
+        <div class="civica-section-meta">
+          <h3>Italiano</h3>
+          <p>Comunicazione in Rete e Scrittura Argomentativa</p>
+        </div>
+        <i class="fas fa-pen-nib civica-section-icon"></i>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-wifi"></i><h4>Comunicazione in rete</h4></div>
+        <p>La rete ha moltiplicato i canali e le forme della comunicazione scritta. Ogni piattaforma (email, forum, social, chat) ha proprie convenzioni di stile e registro. La <strong>multimodalità</strong> — testo + emoji + audio + video — ha creato un linguaggio ibrido, a metà tra scritto e orale. Il fenomeno del flame e del cyberbullismo dimostra come l'anonimato abbassi le inibizioni.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-balance-scale"></i><h4>Scrittura argomentativa</h4></div>
+        <p>Argomentare significa costruire un ragionamento solido a sostegno di una tesi. La struttura classica — <strong>tesi → argomenti → confutazione delle obiezioni → conclusione</strong> — rimane valida anche nella comunicazione digitale. Distinguere argomenti validi da fallacie logiche (ad hominem, uomo di paglia, argomento d'autorità) è una competenza sempre più necessaria nell'era dell'infodemia.</p>
+      </div>
+    </div>
+
+    <!-- 6. GPOI -->
+    <div class="civica-section" id="civica-gpoi">
+      <div class="civica-section-header">
+        <div class="civica-section-num">6</div>
+        <div class="civica-section-meta">
+          <h3>GPOI</h3>
+          <p>Sicurezza, Privacy e GDPR</p>
+        </div>
+        <i class="fas fa-chart-line civica-section-icon"></i>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-file-shield"></i><h4>GDPR – Regolamento Generale sulla Protezione dei Dati</h4></div>
+        <p>Il <strong>GDPR (Reg. UE 2016/679)</strong>, in vigore dal 25 maggio 2018, è il principale quadro normativo europeo per la protezione dei dati personali. I principi fondamentali: liceità e trasparenza, limitazione della finalità, minimizzazione dei dati, integrità e conservazione limitata. I diritti degli interessati includono accesso, rettifica, cancellazione (diritto all'oblio), opposizione e portabilità. Le sanzioni possono arrivare al <strong>4% del fatturato globale annuo</strong>.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-triangle-exclamation"></i><h4>Gestione del rischio e Data Breach</h4></div>
+        <p>Un <strong>data breach</strong> è qualsiasi violazione della sicurezza che comporta distruzione, perdita o divulgazione non autorizzata di dati personali. Il processo di gestione del rischio segue quattro fasi: identificazione → valutazione → trattamento → monitoraggio. In caso di breach, il GDPR impone la notifica al Garante Privacy entro <strong>72 ore</strong> dalla scoperta.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-lock"></i><h4>Privacy by Design e Privacy by Default</h4></div>
+        <p>Il GDPR introduce due principi rivoluzionari: la <strong>Privacy by Design</strong> (protezione integrata fin dalla progettazione) e la <strong>Privacy by Default</strong> (impostazioni predefinite le più protettive possibile). Il <strong>DPO</strong> (Data Protection Officer) è la figura responsabile della conformità al GDPR. La <strong>DPIA</strong> è la valutazione obbligatoria dell'impatto per i trattamenti ad alto rischio.</p>
+      </div>
+    </div>
+
+    <!-- 7. Sistemi e Reti -->
+    <div class="civica-section" id="civica-sistemi">
+      <div class="civica-section-header">
+        <div class="civica-section-num">7</div>
+        <div class="civica-section-meta">
+          <h3>Sistemi e Reti</h3>
+          <p>Cybersecurity e Difesa Digitale</p>
+        </div>
+        <i class="fas fa-shield-alt civica-section-icon"></i>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-circle-nodes"></i><h4>La Triade CIA</h4></div>
+        <p>Il fondamento della sicurezza informatica si basa su tre pilastri: <strong>Confidentiality</strong> (le informazioni accessibili solo a chi è autorizzato — crittografia, VPN), <strong>Integrity</strong> (i dati accurati e non alterati — hash, firma digitale) e <strong>Availability</strong> (i sistemi accessibili quando necessario — ridondanza, backup, protezione da DoS).</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-key"></i><h4>Autenticazione e Crittografia</h4></div>
+        <p>I fattori di autenticazione: qualcosa che <em>sai</em> (password, PIN), qualcosa che <em>hai</em> (token, OTP), qualcosa che <em>sei</em> (biometria). L'<strong>MFA</strong> combina almeno due elementi. La crittografia simmetrica (<strong>AES</strong>) usa la stessa chiave per cifrare e decifrare; quella asimmetrica (<strong>RSA/ECC</strong>) usa una coppia pubblica/privata ed è il fondamento di HTTPS e firma digitale.</p>
+      </div>
+      <div class="topic-card">
+        <div class="topic-card-header"><i class="fas fa-fire-flame-curved"></i><h4>Firewall e Proxy</h4></div>
+        <p>Il firewall analizza il traffico applicando regole predefinite. Tipologie: <strong>packet filter</strong>, <strong>stateful inspection</strong>, <strong>NGFW</strong> (con IDS/IPS e threat intelligence). Il proxy agisce da intermediario: il forward proxy nasconde il client, il reverse proxy protegge i server interni e distribuisce il carico.</p>
+      </div>
+      <div class="civica-threats">
+        <p class="civica-threats-label"><i class="fas fa-bug"></i> Principali minacce informatiche</p>
+        <div class="civica-threats-grid">
+          <div class="civica-threat-item">
+            <i class="fas fa-fish"></i>
+            <h5>Phishing</h5>
+            <p>Email fraudolente che imitano comunicazioni legittime per sottrarre credenziali o dati sensibili.</p>
+          </div>
+          <div class="civica-threat-item">
+            <i class="fas fa-virus"></i>
+            <h5>Malware</h5>
+            <p>Virus, worm, trojan, spyware, ransomware. Il ransomware cripta i dati e chiede un riscatto.</p>
+          </div>
+          <div class="civica-threat-item">
+            <i class="fas fa-bolt"></i>
+            <h5>DDoS</h5>
+            <p>Saturazione del server con traffico artificiale da sorgenti distribuite, rendendo il servizio irraggiungibile.</p>
+          </div>
+          <div class="civica-threat-item">
+            <i class="fas fa-user-secret"></i>
+            <h5>Social Engineering</h5>
+            <p>Manipolazione psicologica dell'utente per ottenere accesso a sistemi. Il fattore umano è il punto debole.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══ PCTO ══ -->
+  <div id="pcto" class="page">
+    <h2 class="page-title mb-4">PCTO</h2>
+    <div class="content-block">
+      <i class="fas fa-briefcase fa-2x mb-3 d-inline-block"></i>
+      <p>Esperienze in azienda, stage, progetti formativi e competenze acquisite durante il percorso PCTO.</p>
+      <div class="placeholder-text"></div>Scrivere dettagli</div>
+    </div>
+  </div>
+
+  <!-- ══ HOBBY ══ -->
+  <div id="hobby" class="page">
+    <h2 class="page-title mb-4">Hobby e Interessi Personali</h2>
+    <div class="content-block">
+      <p>Musica, sport, tecnologia, lettura o qualsiasi passione che arricchisce la tua giornata.</p>
+      <div class="placeholder-text">Spiegare gli hobby</div>
+    </div>
+  </div>
+
+  <!-- ══ CERTIFICAZIONI ══ -->
+  <div id="certificazioni" class="page">
+    <h2 class="page-title mb-4">Certificazioni e Attestati</h2>
+    <div class="content-block">
+      <p>Lingue straniere, informatica, corsi professionali e competenze certificate.</p>
+      <div class="placeholder-text">Armonie digitali e cybersecurity</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h5><i class="fas fa-user-astronaut me-2"></i> Nita Emanuele</h5>
+        <p class="small">Studente nel settore tecnologico e umanistico<br>
+        <i class="fas fa-map-marker-alt me-1"></i> Italia</p>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5>Contatti e informazioni</h5>
+        <p class="small mb-1"><i class="fas fa-envelope me-2"></i> emanuelenita@gmail.com</p>
+        <p class="small mb-1"><i class="fas fa-phone-alt me-2"></i> +39 380 652 7034</p>
+        <p class="small mb-1"><i class="fab fa-github me-2"></i> github.com/nita-emanuele</p>
+      </div>
+    </div>
+    <hr>
+    <div class="text-center small">&copy; 2025 Nita Emanuele — Sito personale. Tutti i diritti riservati!!.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
